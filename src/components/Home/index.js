@@ -28,7 +28,7 @@ class Home extends Component {
   CallLoader = () => {
     const {teamsList, isLoading} = this.state
     return (
-      <div>
+      <div testid="loader">
         <Loader
           type="Oval"
           className="spinloader"
@@ -65,7 +65,7 @@ class Home extends Component {
     const {teamsList, isLoading} = this.state
     // console.log(teamsList)
     return (
-      <div className="bg-container">
+      <div className="bg-container" >
         {isLoading ? this.CallLoader() : this.callRemainingCode()}
       </div>
     )

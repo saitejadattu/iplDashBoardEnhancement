@@ -1,23 +1,11 @@
-
-import {Component} from 'react'
+import React, {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 import MatchCard from '../MatchCard'
 import LatestMatch from '../LatestMatch'
-// import {PieChart, Pie} from 'recharts'
-// const data01 = [
-//   {name: 'Product A', value: 400},
-//   {name: 'Product B', value: 300},
-//   {name: 'Product C', value: 300},
-//   {name: 'Product D', value: 200},
-// ]
-// const data02 = [
-//   {name: 'Category X', value: 100},
-//   {name: 'Category Y', value: 200},
-//   {name: 'Category Z', value: 300},
-//   {name: 'Category W', value: 400},
-// ]
+
+import Legend from '../Legend'
 class TeamMatches extends Component {
   state = {
     latestmathData: {},
@@ -69,7 +57,6 @@ class TeamMatches extends Component {
       umpires: each.umpires,
       venue: each.venue,
     }))
-    // console.log(data.recent_matches)
     // console.log(updatedReceentMatchData)
     const {isLoading} = this.state
     this.setState({
@@ -85,10 +72,22 @@ class TeamMatches extends Component {
 
   render() {
     const {banner, latestmathData, receentMatchData, isLoading} = this.state
+    let data0 = [
+      {name: 'lost', value: 0},
+      {name: 'won', value: 0},
+    ]
+    receentMatchData.map(each => {
+      if (each.matchStatus === 'Lost') {
+        data0[0].value += 1
+      } else {
+        data0[1].value += 1
+      }
+    })
+    // console.log(data0)
     return (
       <div className="bg-team-matches-container">
         {isLoading ? (
-          <div>
+          <div testid="loader">
             <Loader
               className="spinloader"
               type="Oval"
@@ -116,29 +115,9 @@ class TeamMatches extends Component {
             </ul>
           </div>
         )}
+        <Legend data0={data0} />
       </div>
     )
   }
 }
 export default TeamMatches
-// <PieChart width={730} height={250}>
-//   <Pie
-//     data={receentMatchData.matchStatus}
-//     dataKey="value"
-//     nameKey="name"
-//     cx="50%"
-//     cy="50%"
-//     outerRadius={50}
-//     fill="#8884d8"
-//   />
-//   <Pie
-//     dataKey="value"
-//     nameKey="name"
-//     cx="50%"
-//     cy="50%"
-//     innerRadius={60}
-//     outerRadius={80}
-//     fill="#82ca9d"
-//     label
-//   />
-// </PieChart>
