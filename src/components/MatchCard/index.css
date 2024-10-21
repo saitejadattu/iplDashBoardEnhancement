@@ -1,0 +1,31 @@
+
+.match-card-list-item {
+  border-radius: 5px;
+  background-color: #0f172a;
+  padding: 40px;
+  margin: 11px;
+  height: 500px;
+  width: 31%;
+  text-align: center;
+  align-self: center;
+  color: white;
+  font-family: 'Bree Serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.macth-card-competingTeamLogo {
+  height: 180px;
+  width: 180px;
+}
+.match-competingTeam {
+  font-size: 30px;
+}
+.match-win {
+  color: #18ed66;
+  font-size: 25px;
+}
+.match-lose {
+  color: #e31a1a;
+  font-size: 25px;
+}

@@ -1,0 +1,43 @@
+
+.bg-team-matches-container {
+  background-image: linear-gradient(to top, #1e293b, #a4261d);
+  width: 100%;
+  min-height: 100vh;
+  max-height: 10000vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.spinloader {
+  display: flex;
+  justify-content: center;
+}
+.banner-image {
+  width: 100%;
+  align-self: center;
+}
+.latest-match-text {
+  font-size: 25px;
+  font-family: 'Bree Serif';
+  color: white;
+}
+.match-card-un-ordered-list {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.back-button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: 500;
+  font-family: inherit;
+  margin-bottom: 5px;
+  width: 100px;
+  border-radius: 5px;
+  border: 0px;
+}

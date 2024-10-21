@@ -1,0 +1,43 @@
+
+.latest-match-details-container {
+  background-color: #0f172a;
+  color: white;
+  font-family: 'Bree Serif';
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.match-venue-details-container-a {
+  width: 30%;
+}
+.match-venue-details-container-b {
+  width: 30%;
+  text-align: end;
+}
+.competingTeam-text {
+  font-size: 25px;
+  font-weight: 600;
+}
+.venue-text {
+  font-size: 20px;
+}
+.matchStatus-text {
+  font-size: 20px;
+}
+.competingTeam-logo {
+  height: 150px;
+  width: 180px;
+  align-self: center;
+}
+.competingTeamLogo-container {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+}
+.competingTeam-text-a {
+  font-size: 17px;
+}
+.competingTeam-text-b {
+  font-size: 12px;
+}
